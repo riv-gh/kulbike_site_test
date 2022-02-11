@@ -81,10 +81,17 @@
     <div id="message-container">
         <h2>Оствить сообщение</h2>
         <form action='/' method="get">
-            <input type="text">
-            <textarea></textarea>
+            <label for="tb_name">Как обращаться?</label>
+            <input type="text" id="tb_name" name="name" placeholder="">
+            <label for="tb_phone">Куда звонить?</label>
+            <input type="text" id="tb_phone" name="phone" placeholder="">
+            <label for="tb_message">О чем говорить?</label>
+            <textarea id="tb_message" name="message"></textarea>
             <input type="submit" value="Отправить">
         </form>
+    </div>
+    <div id="footer-container">
+        <span>KUL</span>BIKE &copy; <span>2022</span>
     </div>
     <script src="./src/js/canvas_animaiton.js"></script>
     <script src="./src/js/price.js"></script>
