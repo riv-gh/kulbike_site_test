@@ -178,12 +178,16 @@ h2 {
     padding: 10px;
     border: 2px solid #fff;
     border-radius: 10px;
-    background-color: transparent;
+    background-color: rgba(0,0,0,.5);
     color: #e46404;
+}
+#message-container form>textarea {
+    min-height: 20vw;
+    resize: vertical;
 }
 
 #message-container form>input:focus, 
-#message-container form>textarea {
+#message-container form>textarea:focus {
     display: block;
     width: 100%;
     margin: 10px 0;
