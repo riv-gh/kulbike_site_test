@@ -96,6 +96,29 @@ h2 {
 }
 
 
+#menu {
+    position: fixed;
+    background-color: rgba(0,0,0,.5);
+    width: 100%;
+    display:flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    z-index: 999;
+}
+#menu>a {
+    color: white;
+    text-decoration: none;
+    border: 2px solid #fff;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;
+
+}
+#menu>a:hover {
+    color: #e46404;
+}
+
+
 #start-section {
     height: 100vh;
     position: relative;
@@ -150,19 +173,28 @@ h2 {
     margin: 0 auto;
     padding: 30px;
     /* background-color: #e46404; */
-    background-color: #fff;
-    color: #000;
+    background-color: rgba(0,0,0,.8);
+    color: #fff;
     border-radius: 40px;
+    border: 2px solid #e46404;
+    width: 60%;
 }
 #price-table tr td {
-    border-bottom: 2px dashed transparent
+    border-bottom: 2px dashed transparent;
 }
 #price-table tr td+td {
     text-align: right;
 }
 #price-table tr:hover td {
-    border-bottom: 2px dashed black
+    border-bottom: 2px dashed #e46404;
+    color: #e46404;
+    font-weight: 900;
 }
+
+#instagram-container .embedsocial-hashtag {
+    margin-top: -115px;
+}
+
 
 #message-container form {
     max-width: 600px;
@@ -180,6 +212,7 @@ h2 {
     border-radius: 10px;
     background-color: rgba(0,0,0,.5);
     color: #e46404;
+    transition: all .2s;
 }
 #message-container form>textarea {
     min-height: 20vw;
@@ -193,9 +226,15 @@ h2 {
     margin: 10px 0;
     padding: 10px;
     border-color: #e46404;
+    background-color: rgba(0,0,0,.9);
     color: #fff;
-}
 
+}
+#message-container form>input[type=submit]:hover {
+    background-color: #e46404;
+    color: #fff;
+    border-color: #e46404;
+}
 #footer-container {
     text-align: center;
     text-transform: uppercase;
