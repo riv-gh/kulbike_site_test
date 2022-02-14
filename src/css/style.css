@@ -3,20 +3,22 @@
     /* outline: 1px solid red;; */
 }
 html {
-    
     background-color: black;
     color: white;
     font-family: Roboto, sans-serif;
     /* font-family: monospace; */
     width: 100%;
     overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+section+section {
+    padding-top: 30px;
 }
 
 h2 {
     display: inline-block;
     border-radius: 50px;
     padding: 20px 50px;
-    width: 800px;
     text-align: center;
     background-color: #e46404;
     /* line-height: 0px; */
@@ -34,7 +36,7 @@ h2 {
     background-color: silver;
     position: relative;
     z-index: 999;
-    border: 1px solid red;
+    /* border: 1px solid red; */
     min-height: 60px;
 }
 
@@ -101,7 +103,7 @@ h2 {
     background-color: rgba(0,0,0,.5);
     width: 100%;
     display:flex;
-    flex-wrap: nowrap;
+    flex-wrap:warp;
     justify-content: space-around;
     z-index: 999;
 }
@@ -112,56 +114,50 @@ h2 {
     padding: 10px 20px;
     margin: 10px;
     border-radius: 10px;
-
+}
+#menu>a:nth-child(1) {
+    border: 2px solid #e46404;
 }
 #menu>a:hover {
     color: #e46404;
+}
+#menu>a>span {
+    color: #e46404;
+}
+#menu>a:hover>span {
+    color: #fff;
 }
 
 
 #start-section {
     height: 100vh;
     position: relative;
-    font-family: monospace;
 }
-#start-section>div {
-    position: absolute;
-    left: 50%;
-    font-size: 40vh;
-    line-height: 30vh;
-    color: #e46404;
-}
-#start-section>div:nth-child(1){
-    bottom: 50%;
-    transform: translate(-50%,50%);
-    width: 100%;
-    display:flex;
+#start-section {
+    display: flex;
+    align-items: center;
     justify-content: center;
-    flex-wrap: nowrap;
+    font-size: 40vh;
+    line-height: 35vh;
+    text-align: center;
+    font-family: 'Times New Roman', Times, serif;
 }
-#start-section>div:nth-child(1)>span:not(.hide-letter) {
-    animation: caption1 1s linear;
-}
-#start-section>div:nth-child(2){
-    bottom: 0;
-    transform: translateX(-50%);
-    color: white;
-    animation: caption2 1s ease-in;
-}
-
-#start-section .hide-letter {
-    color: transparent;
-    display: inline-block;
-    font-size: 80vh;
-}
-
-#start-section svg {
+/* #start-section svg {
     height: 40vh;
     width: 40vh;
+} */
+#start-section>div>div:first-child {
+    color: #e46404;
+    position: relative;
+}
+#start-section>div>div:first-child svg {
+    position:absolute;
+    left: 9vh;
+    height: 5vh;
+}
+#start-section .hide-letter0 {
+    color: transparent;
     position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
 }
 
 #start-section svg g.v1,
