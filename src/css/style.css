@@ -198,9 +198,16 @@ h2 {
         color:#e46404;
         border-color: #fff;
     }
-    h2 { 
+    h2 {
+        min-height: 60px;
         font-size: 20px;
         line-height: 60px;
+    }
+    /* section:not(#price-container) h2, */
+    #instagram-container h2 {
+        min-width: 400px;
+        margin-bottom: 30px;
+        /* max-width: 100%; */
     }
 }
 
@@ -268,8 +275,4 @@ h2 {
 
 #footer-container span {
     color: #e46404;
-}
-
-@media screen and (min-width: 1100px) {
-
 }
