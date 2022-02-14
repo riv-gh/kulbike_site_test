@@ -1,4 +1,4 @@
-fetch('/price.txt').then((response) => {
+fetch('./price.txt').then((response) => {
 	return response.text()
 }).then((text_price) => {
 	document.getElementById('price-table').innerHTML = 
