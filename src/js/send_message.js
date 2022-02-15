@@ -1,16 +1,17 @@
-const form_btn = document.querySelector('#message-form input[type=button]');
-form_btn.addEventListener('click', async (form) => {
-    return send_message(
+const message_show_el = document.querySelector('#message_show')
+message_show_el.querySelector('a').addEventListener('click',()=>{
+    message_show_el.classList.remove('show')
+})
+
+document.querySelector('#message-form input[type=button]').addEventListener('click', async (form) => {
+    send_message(
         'Имя: *' + document.getElementById('tb_name').value + '*\n' +
         'Телефон: ' + document.getElementById('tb_phone').value + '\n' +
         ( document.getElementById('cb_write').checked ? 'Предпочтение текста\n' : 'Предпочтение звонка\n') +
         'Сообщение:\n' + document.getElementById('tb_message').value + '\n\n' +
         '[‌‌Перезвонить](' + document.location.origin+document.location.pathname + 'recall.html?' + document.getElementById('tb_phone').value.replace('+','') + ')'
-    )
-        
+    )    
 })
-
-
 
 function send_message(text) {
     const telegram_api_key = '5178774646:AAF2TR-SJXoLeBkt0Jy5FFUOumfYtB9wL8k' //please not use
@@ -22,10 +23,17 @@ function send_message(text) {
     body: `chat_id=${telegram_chat_id}&parse_mode=Markdown&text=${encodeURI(text)}`,
     }).then((response) => {
         return response.text()
-    }).then((text) => {
-        console.log(text)
+    }).then((json) => {
+        if (!JSON.parse(json)['ok']) 
+            throw JSON.parse(json)
+        message_show_el.classList.add('show')
+        setTimeout(()=>{
+            message_show_el.classList.remove('show')
+        },3000)
+        
     }).catch((err) => {
         console.warn('Ошибка отправки', err)
+        document.querySelector('#message_show pre').textContent = 'Ошибка отправки!\n' + err
     });
     return false
 }

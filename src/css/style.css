@@ -253,7 +253,8 @@ h2 {
     display: block;
 }
 #message-container form>input, 
-#message-container form>textarea {
+#message-container form>textarea,
+#message_show a {
     display: block;
     width: 100%;
     margin: 10px 0;
@@ -270,7 +271,8 @@ h2 {
 }
 
 #message-container form>input:focus, 
-#message-container form>textarea:focus {
+#message-container form>textarea:focus,
+#message_show a:focus {
     display: block;
     width: 100%;
     margin: 10px 0;
@@ -279,7 +281,8 @@ h2 {
     background-color: rgba(0,0,0,.9);
     color: #fff;
 }
-#message-container form>input[type=button]:hover {
+#message-container form>input[type=button]:hover,
+#message_show a:hover {
     background-color: #e46404;
     color: #fff;
     border-color: #e46404;
@@ -327,9 +330,39 @@ h2 {
     margin: 3px;
 }
 
-
-
-
+#message_show {
+    position: fixed;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 999;
+    border: 2px solid #e46404;
+    border-radius:10px;
+    padding: 10px;
+    background-color: rgba(0,0,0,.8);
+    width: 300px;
+    display: none;
+}
+#message_show.show {
+    display: block;
+}
+#message_show div  {
+    font-weight: 900;
+    line-height: 40px;
+    text-align: center;
+}
+#message_show .header a {
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    padding: 0;
+    margin: 0;
+    float: right
+}
+#message_show a {
+    text-decoration: none;
+    text-align: center;
+}
 #footer-container {
     text-align: center;
     text-transform: uppercase;
