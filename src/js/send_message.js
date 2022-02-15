@@ -1,9 +1,13 @@
-const form = document.getElementById('message-form');
-form.addEventListener('submit', async (form) => {
-    send_message('Имя: ' + document.getElementById('tb_name').value + '\n' +
+const form_btn = document.querySelector('#message-form input[type=button]');
+form_btn.addEventListener('click', async (form) => {
+    return send_message(
+        'Имя: ' + document.getElementById('tb_name').value + '\n' +
         'Телефон: ' + document.getElementById('tb_phone').value + '\n' +
-        'Сообщение:\n' + document.getElementById('tb_message').value);
-    return false;
+        ( document.getElementById('cb_write').checked ? 'Предпочтение текста\n' : 'Предпочтение звонка\n') +
+        'Сообщение:\n' + document.getElementById('tb_message').value + '\n' +
+        document.location.href + 'recall.html?' + document.getElementById('tb_phone').value.replace('+','')
+    )
+        
 })
 
 
@@ -19,8 +23,9 @@ function send_message(text) {
     }).then((response) => {
         return response.text()
     }).then((text) => {
-        console.log(text);
+        console.log(text)
     }).catch((err) => {
-        console.warn('Ошибка отправки', err);
+        console.warn('Ошибка отправки', err)
     });
+    return false
 }
