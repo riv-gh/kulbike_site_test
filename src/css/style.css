@@ -192,7 +192,17 @@ h2 {
         text-align: center;
     }
     #menu:not(.show) a+a {
-        display: none;
+        padding-top: 0;
+        padding-bottom: 0;
+        margin-top: 0;
+        margin-bottom: 0;
+        border-width: 0;
+        transform: translateY(-500px);
+        height: 0;
+    }
+    #menu.show a+a {
+        transform: translateY(0);
+        transition: .2s transform;
     }
     #menu.show #menu_btn {
         color:#e46404;
