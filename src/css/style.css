@@ -217,8 +217,16 @@ h2 {
 #price-table tr td+td {
     text-align: right;
 }
-#price-table tr:hover td {
+#price-table tr:nth-child(1) {
+    font-weight: 900;
+}
+#price-table tr+tr:hover td:not(.table-header) {
     border-bottom: 2px dashed #e46404;
+    color: #e46404;
+    font-weight: 900;
+}
+#price-table tr td.table-header {
+    border-bottom: 2px solid #e46404;
     color: #e46404;
     font-weight: 900;
 }
