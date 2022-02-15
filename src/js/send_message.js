@@ -5,7 +5,7 @@ form_btn.addEventListener('click', async (form) => {
         'Телефон: ' + document.getElementById('tb_phone').value + '\n' +
         ( document.getElementById('cb_write').checked ? 'Предпочтение текста\n' : 'Предпочтение звонка\n') +
         'Сообщение:\n' + document.getElementById('tb_message').value + '\n' +
-        document.location.href + 'recall.html?' + document.getElementById('tb_phone').value.replace('+','')
+        document.location.origin+document.location.pathname + 'recall.html?' + document.getElementById('tb_phone').value.replace('+','')
     )
         
 })
