@@ -227,6 +227,10 @@ h2 {
     border: 2px solid #fff;
 }
 #map-block a {
+    color: #fff;
+    font-weight: 600;
+}
+#map-block a:hover {
     color: #e46404
 }
 
@@ -237,13 +241,15 @@ h2 {
         background-color: transparent;
         border-color: transparent;
     }
-    #map-block img {
-        float: left;
-        margin: 0 40px 20px 0;
+    #map-block>div {
+        display: flex;
+        align-items: center;
+        justify-content: space-around;
+
     }
-    #map-block>div>div {
-        font-size: 20px;
-        padding: 15px 0;
+    #map-block img {
+        float: none;
+        margin: 0;
     }
 
     #price-table { 
@@ -319,6 +325,12 @@ h2 {
         min-width: 400px;
         margin-bottom: 30px;
         /* max-width: 100%; */
+    }
+}
+
+@media screen and (max-width: 720px) {
+    #map-block>div {
+        flex-direction: column;
     }
 }
 
