@@ -190,9 +190,20 @@ h2 {
     border-radius: 40px;
     border: 2px solid #e46404;
     width: 60%;
+
 }
 @media screen and (max-width: 1100px){
-    #price-table { width: 100%; }
+    #price-table { 
+        width: 100%; 
+        border-collapse: collapse;
+    }
+    #price-table td { 
+        padding: 10px
+    }
+    #price-table .table-header {
+        border-top: 2px solid #e46404;
+    }   
+
     /* разворачиваемая таблица цен */
     #price-table .table-header::after {
         content: '(развернуть)';
