@@ -199,9 +199,9 @@ h2 {
 @media screen and (orientation: portrait) {
     #start-section {
         /* font-size: 40vw; */
-        font-size: 35vw;
+        font-size: 36vw;
         /* line-height: 35vw; */
-        line-height: 26vw;
+        line-height: 28vw;
     }
 
     #start-section>div>div:first-child svg {
@@ -212,7 +212,7 @@ h2 {
     }
     #start-section .small {
         /* font-size: 8vw; */
-        font-size: 15vw;
+        font-size: 14vw;
         /* line-height: 5vw; */
         line-height: 20vw;
     }
