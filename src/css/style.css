@@ -36,6 +36,23 @@ h2 {
     z-index: 999;
     min-height: 60px;
 }
+/* @media screen and (max-width: 592px) {
+    #instagram-container {
+        min-height: 1500vw;
+    }
+}
+@media screen and (min-width: 592px) {
+    #instagram-container {
+        min-height: 425vw;
+    }
+}
+@media screen and (min-width: 784px) {
+    #instagram-container {
+        min-height: 160vw;
+    }
+} */
+
+
 
 #map-container iframe {
     width: 100%;
