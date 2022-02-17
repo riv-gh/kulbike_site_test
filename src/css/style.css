@@ -170,6 +170,11 @@ h2 {
 #start-section svg g.v2 {
     display: none;
 }
+#start-section .small {
+    font-size: 8vh;
+    line-height: 6vh;
+    color: rgba(255,255,255,.5);
+}
 
 #price-container,
 #message-container {
@@ -197,6 +202,10 @@ h2 {
         bottom: 0;
         height: 5vw;
         display: none;
+    }
+    #start-section .small {
+        font-size: 8vw;
+        line-height: 5vw;
     }
 }
 
