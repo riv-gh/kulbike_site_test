@@ -192,6 +192,20 @@ h2 {
     width: 60%;
 
 }
+@media screen and (orientation: portrait) {
+    #start-section {
+        font-size: 40vw;
+        line-height: 35vw;
+    }
+
+    #start-section>div>div:first-child svg {
+        /* left: 9vw; */
+        bottom: 0;
+        height: 5vw;
+        display: none;
+    }
+}
+
 @media screen and (max-width: 1100px){
     #price-table { 
         width: 100%; 
@@ -223,12 +237,12 @@ h2 {
     /* разворачиваемая таблица цен */
 
 
-    #start-section>div {
+    /* #start-section>div {
         transform: rotateZ(-90deg);
         font-size: 40vw;
         line-height: 35vw;
     }
-    #start-section>div svg {display: none;}
+    #start-section>div svg {display: none;} */
     #menu {
         flex-direction: column;
         background-color: rgba(0,0,0,.7)
