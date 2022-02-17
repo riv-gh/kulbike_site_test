@@ -193,6 +193,25 @@ h2 {
 }
 @media screen and (max-width: 1100px){
     #price-table { width: 100%; }
+    /* разворачиваемая таблица цен */
+    #price-table .table-header::after {
+        content: '(развернуть)';
+        color: #fff;
+        font-weight: 300;
+    }
+    #price-table .table-header.header-show::after {
+        content: '(свернуть)';
+    }
+    #price-table .table-child {
+        display:none;
+    }
+    #price-table .table-child.child-show {
+        display:table-cell;
+    }
+
+    /* разворачиваемая таблица цен */
+
+
     #start-section>div {
         transform: rotateZ(-90deg);
         font-size: 40vw;
