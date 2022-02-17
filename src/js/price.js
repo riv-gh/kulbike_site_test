@@ -17,10 +17,12 @@ fetch('./price.txt').then((response) => {
 	console.warn('Ошибка загрузки текста', err)
     document.getElementById('price-table').textContent = 'Прайс-лист временно недоступен...'
 })
+var global
 setTimeout(()=>{
     document.querySelectorAll('#price-container .table-header').forEach(header=>{
         header.addEventListener('click', (event)=>{
             event.target.classList.toggle('header-show')
+            global = event.target
             document.querySelectorAll(`.table-child_${
                 Array.from(event.target.classList).find(el=>el.indexOf('table-header_')+1).split('_')[1]
             }`).forEach(el => {
