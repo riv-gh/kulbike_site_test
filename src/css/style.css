@@ -244,7 +244,7 @@ h2 {
 }
 
 
-@media screen and (max-width: 1100px){
+@media screen and (max-width: 1110px){
     #map-block>div {
         position: static;
         background-color: transparent;
@@ -299,7 +299,7 @@ h2 {
     #start-section>div svg {display: none;} */
     #menu {
         flex-direction: column;
-        background-color: rgba(0,0,0,.7)
+        background-color: rgba(0,0,0,.7);
     }
     #menu #menu_btn {
         display: block;
