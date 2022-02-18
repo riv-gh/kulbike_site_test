@@ -24,18 +24,58 @@ h2 {
     margin-left: 50%;
     transform: translateX(-50%);
     font-size: 60px;
+    
     position: relative;
     z-index: 9;
     text-transform: uppercase;
 }
 
 
-#instagram-container .warper {
-    background-color: silver;
-    position: relative;
-    z-index: 999;
-    min-height: 60px;
+
+@keyframes first-container-kul {
+    0% { color: #fff; }
+    50% { color: #fff; }
+    100% { color: #e46404; }
+} 
+@keyframes first-container-bike {
+    0% { color: #e46404; }
+    50% { color: #e46404; }
+    100% { color: #fff; }
+} 
+
+#first-container {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
+#first-container h1 {
+    margin: 0;
+    font-size: 10vw;
+    line-height: 10vw;
+    letter-spacing: 1vw
+}
+#first-container h1>span:nth-child(1) {
+    /* animation: first-container-kul 1s; */
+    color: #e46404;
+}
+#first-container>div>div {
+    display: inline-block;
+    text-transform: uppercase;
+    font-size: 3vw;
+    font-weight: 300;
+    padding: 1vw 0;
+    letter-spacing: .35vw
+}
+#first-container>div>div:first-child {
+    border-bottom: 1px solid #fff;
+}
+#first-container>div>div:last-child {
+    border-top: 1px solid #fff;
+}
+
+
 /* @media screen and (max-width: 592px) {
     #instagram-container {
         min-height: 1500vw;
@@ -53,46 +93,7 @@ h2 {
 } */
 
 
-
-#canvas {
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
-    padding: 0!important;
-    margin: 0!important;
-    background: #000;
-    margin: 20px auto;
-    display: block;
-    position: fixed;
-    z-index: -2;
-}
-
-@keyframes cover {
-    0% { background-color: rgba(0,0,0,1) }
-    60% { background-color: rgba(0,0,0,1) }
-    100% { background-color: rgba(0,0,0,.8) }
-} 
-@keyframes caption1 {
-    0% { color: transparent }
-    100% { color: #e46404 }
-} 
-@keyframes caption2 {
-    0% { 
-        transform: translate(-45%);
-        color: transparent;
-    }
-    70% { 
-        transform: translate(-45%);
-        color: transparent;
-    }
-    100% { 
-        transform: translateX(-50%); 
-        color: #fff;
-    }
-} 
-
-#canvas_cover {
+#fon_cover {
     background-color: rgba(0,0,0,.8);
     top: 0;
     left: 0;
@@ -100,16 +101,14 @@ h2 {
     height: 100vh;
     position: fixed;
     z-index: -1;
-    /* animation: cover 5s linear; */
 }
-
 
 #menu {
     position: fixed;
     background-color: rgba(0,0,0,.5);
     width: 100%;
     display:flex;
-    flex-wrap:warp;
+    flex-wrap: wrap;
     justify-content: space-around;
     z-index: 999;
 }
@@ -120,6 +119,7 @@ h2 {
     padding: 10px 20px;
     margin: 10px;
     border-radius: 10px;
+    white-space: nowrap;
 }
 #menu>a:nth-child(1),
 #menu>a:nth-child(2) {
@@ -138,49 +138,6 @@ h2 {
     display: none;
 }
 
-
-#start-section {
-    height: 100vh;
-    position: relative;
-}
-#start-section {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    /* font-size: 40vh; */
-    font-size: 35vh;
-    /* line-height: 35vh; */
-    line-height: 26vh;
-    text-align: center;
-    font-family: 'Times New Roman', Times, serif;
-}
-#start-section>div>div:first-child {
-    color: #e46404;
-    position: relative;
-}
-#start-section>div>div:first-child svg {
-    position:absolute;
-    left: 9vh;
-    height: 5vh;
-    display: none;
-}
-#start-section .hide-letter0 {
-    color: transparent;
-    position: absolute;
-}
-
-#start-section svg g.v1,
-#start-section svg g.v2 {
-    display: none;
-}
-#start-section .small {
-    /* font-size: 8vh; */
-    font-size: 15vh;
-    /* line-height: 6vh; */
-    line-height: 20vh;
-    color: rgba(255,255,255,.5);
-}
-
 #price-container,
 #message-container {
     padding: 20px;
@@ -196,28 +153,6 @@ h2 {
     width: 60%;
 
 }
-@media screen and (orientation: portrait) {
-    #start-section {
-        /* font-size: 40vw; */
-        font-size: 36vw;
-        /* line-height: 35vw; */
-        line-height: 28vw;
-    }
-
-    #start-section>div>div:first-child svg {
-        /* left: 9vw; */
-        bottom: 0;
-        height: 5vw;
-        display: none;
-    }
-    #start-section .small {
-        /* font-size: 8vw; */
-        font-size: 14vw;
-        /* line-height: 5vw; */
-        line-height: 20vw;
-    }
-}
-
 
 #map-container iframe {
     width: 100%;
@@ -281,7 +216,6 @@ h2 {
         border-top: 2px solid #e46404;
     }   
 
-    /* разворачиваемая таблица цен */
     #price-table .table-header::after {
         content: '(развернуть)';
         color: #fff;
@@ -297,15 +231,6 @@ h2 {
         display:table-cell;
     }
 
-    /* разворачиваемая таблица цен */
-
-
-    /* #start-section>div {
-        transform: rotateZ(-90deg);
-        font-size: 40vw;
-        line-height: 35vw;
-    }
-    #start-section>div svg {display: none;} */
     #menu {
         flex-direction: column;
         background-color: rgba(0,0,0,.7);
@@ -336,12 +261,12 @@ h2 {
     h2 {
         min-height: 60px;
         font-size: 20px;
-        line-height: 60px;
     }
-    /* section:not(#price-container) h2, */
     #instagram-container h2 {
-        min-width: 400px;
+        min-width: 380px;
         margin-bottom: 30px;
+        line-height: 60px;
+
         /* max-width: 100%; */
     }
 }

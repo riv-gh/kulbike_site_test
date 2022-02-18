@@ -1,14 +1,3 @@
-.slide-container{
-	position: relative;
-	/*text-align: center;*/
-}
-
-header {
-	/*background-color:#2780e3;	
-	width:440px;*/
-	transform: perspective(500px) rotateY(30deg) rotateX(15deg);
-}
-
 .cb-slideshow {
     margin: 0;
     padding: 0;
@@ -45,26 +34,6 @@ header {
     -o-animation: imageAnimation 36s linear infinite 0s;
     -ms-animation: imageAnimation 36s linear infinite 0s;
     animation: imageAnimation 36s linear infinite 0s; 
-}
-.cb-slideshow li div { 
-    z-index: 1000;
-    position: absolute;
-    bottom: 30px;
-    left: 0px;
-    width: 100%;
-    text-align: center;
-    opacity: 0;
-    color: #fff;
-    -webkit-animation: titleAnimation 36s linear infinite 0s;
-    -moz-animation: titleAnimation 36s linear infinite 0s;
-    -o-animation: titleAnimation 36s linear infinite 0s;
-    -ms-animation: titleAnimation 36s linear infinite 0s;
-    animation: titleAnimation 36s linear infinite 0s; 
-}
-.cb-slideshow li div h3 { 
-    font-size: 240px;
-    padding: 0;
-    line-height: 200px; 
 }
 .cb-slideshow li:nth-child(1) span { 
     background-image: url(../img/fon/1.jpg) 
@@ -144,7 +113,6 @@ header {
     -ms-animation-delay: 30s;
     animation-delay: 30s; 
 }
-/* РђРЅРёРјР°С†РёРё РґР»СЏ СЃР»Р°Р№РґС€РѕСѓ */
 @-webkit-keyframes imageAnimation { 
     0% { opacity: 0;
     -webkit-animation-timing-function: ease-in; }
@@ -228,11 +196,4 @@ header {
 
 .no-cssanimations .cb-slideshow li span{
 	opacity: 1;
-}
-
-@media screen and (max-width: 1140px) { 
-    .cb-slideshow li div h3 { font-size: 140px }
-}
-@media screen and (max-width: 600px) { 
-    .cb-slideshow li div h3 { font-size: 80px }
 }
