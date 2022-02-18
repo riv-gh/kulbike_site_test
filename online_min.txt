@@ -1,0 +1,3 @@
+https://minify-html.com/
+https://cssminifier.org/
+https://www.obfuscator.io/
