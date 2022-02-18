@@ -75,24 +75,6 @@ h2 {
     border-top: 1px solid #fff;
 }
 
-
-/* @media screen and (max-width: 592px) {
-    #instagram-container {
-        min-height: 1500vw;
-    }
-}
-@media screen and (min-width: 592px) {
-    #instagram-container {
-        min-height: 425vw;
-    }
-}
-@media screen and (min-width: 784px) {
-    #instagram-container {
-        min-height: 160vw;
-    }
-} */
-
-
 #fon_cover {
     background-color: rgba(0,0,0,.8);
     top: 0;
@@ -146,7 +128,7 @@ h2 {
 #price-table {
     margin: 0 auto;
     padding: 30px;
-    background-color: rgba(0,0,0,.8);
+    background-color: rgba(0,0,0,.5);
     color: #fff;
     border-radius: 40px;
     border: 2px solid #e46404;
@@ -208,9 +190,10 @@ h2 {
     #price-table { 
         width: 100%; 
         border-collapse: collapse;
+        border-radius: 0;
     }
     #price-table td { 
-        padding: 10px
+        padding: 10px;
     }
     #price-table .table-header {
         border-top: 2px solid #e46404;
