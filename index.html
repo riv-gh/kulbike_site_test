@@ -51,47 +51,59 @@
     <section id="shop-container">
         <h2>Купить велосипед</h2>
         <div class="item-list">
-            <div class="item">
+            <div class="item-block">
                 <h3>bike name</h3>
-                <div class="photo"
+                <div class="item"
                     style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_0_large.webp)"
-                ></div>
-                <a href="javascript:void(0);">Подробнее</a>
+                >
+                    <div>Подробнее</div>
+                </div>
+                
             </div>
-            <div class="item">
+            <div class="item-block">
                 <h3>bike name</h3>
-                <div class="photo"
+                <div class="item"
                     style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_1_large.webp)"
-                ></div>
-                <a href="javascript:void(0);">Подробнее</a>
+                >
+                    <div>Подробнее</div>
+                </div>
+                
             </div>
-            <div class="item">
+            <div class="item-block">
                 <h3>bike name</h3>
-                <div class="photo"
+                <div class="item"
                     style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_2_large.webp)"
-                ></div>
-                <a href="javascript:void(0);">Подробнее</a>
+                >
+                    <div>Подробнее</div>
+                </div>
+                
             </div>
-            <div class="item">
+            <div class="item-block">
                 <h3>bike name</h3>
-                <div class="photo"
+                <div class="item"
                     style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_0_large.webp)"
-                ></div>
-                <a href="javascript:void(0);">Подробнее</a>
+                >
+                    <div>Подробнее</div>
+                </div>
+                
             </div>
-            <div class="item">
+            <div class="item-block">
                 <h3>bike name</h3>
-                <div class="photo"
+                <div class="item"
                     style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_1_large.webp)"
-                ></div>
-                <a href="javascript:void(0);">Подробнее</a>
+                >
+                    <div>Подробнее</div>
+                </div>
+                
             </div>
-            <div class="item">
+            <div class="item-block">
                 <h3>bike name</h3>
-                <div class="photo"
+                <div class="item"
                     style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_2_large.webp)"
-                ></div>
-                <a href="javascript:void(0);">Подробнее</a>
+                >
+                    <div>Подробнее</div>
+                </div>
+                
             </div>
         </div>
     </section>
@@ -108,7 +120,7 @@
             /* width: 30%; под разную ширину */
             text-align: center;
         }
-        #shop-container .item-list .photo {
+        #shop-container .item-list .item {
             background-color: #fff;
             background-repeat: no-repeat;
             background-position: center center;
@@ -117,12 +129,22 @@
             border-radius: 30px;
             width: 25vw;
             height: 25vw;
+            position: relative;
+            transition: transform .2s;
         }
-        #shop-container .item-list a {
+        #shop-container .item-list>div>div>div {
             background-color: #e46404;
+            display: inline-block;
             padding: 20px 30px;
             border-radius: 10px;
             text-decoration: none;
+            position: absolute;
+            bottom:-30px;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+        #shop-container .item-list .item:hover {
+            transform: scale(105%);
         }
     </style>
     <section id="bicycle-container">
