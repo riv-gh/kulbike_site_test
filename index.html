@@ -132,7 +132,7 @@
             position: relative;
             transition: transform .2s;
         }
-        #shop-container .item-list>div>div>div {
+        #shop-container .item-list .item>div {
             background-color: #e46404;
             display: inline-block;
             padding: 20px 30px;
@@ -142,9 +142,14 @@
             bottom:-30px;
             transform: translateX(-50%);
             z-index: 10;
+            transition: transform .2s;
         }
         #shop-container .item-list .item:hover {
             transform: scale(105%);
+        }
+        #shop-container .item-list .item:hover>div {
+            /* transform: scale(105%); */
+            transform: translateX(-50%) scale(110%);
         }
     </style>
     <section id="bicycle-container">
