@@ -54,10 +54,10 @@ message_show_el.querySelector('a').addEventListener('click',()=>{
 document.querySelector('#message-form input[type=button]').addEventListener('click', async (form) => {
     send_message(
         'Имя: *' + document.getElementById('tb_name').value + '*\n' +
-        'Телефон: ' + document.getElementById('tb_phone').value + '\n' +
+        'Телефон: ' + document.getElementById('tb_phone') + '\n' +
         ( document.getElementById('cb_write').checked ? 'Предпочтение текста\n' : 'Предпочтение звонка\n') +
         'Сообщение:\n' + document.getElementById('tb_message').value + '\n\n' +
-        '[‌‌Перезвонить](' + document.location.origin+document.location.pathname + 'recall.html?' + document.getElementById('tb_phone').value.replace('+','') + ')'
+        '[‌‌Перезвонить](' + document.location.origin+document.location.pathname + 'recall.html?' + document.getElementById('tb_phone').value.replace(/\s|-|\(|\)|\+/gi,'') + ')'
     )    
 })
 function form_clear() {
