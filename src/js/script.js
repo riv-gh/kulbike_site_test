@@ -48,6 +48,7 @@ document.querySelectorAll('#menu a:not(#menu_btn)').forEach(a=>{
 const message_show_el = document.querySelector('#message_show')
 message_show_el.querySelector('a').addEventListener('click',()=>{
     message_show_el.classList.remove('show')
+    form_clear()
 })
 
 document.querySelector('#message-form input[type=button]').addEventListener('click', async (form) => {
@@ -59,6 +60,11 @@ document.querySelector('#message-form input[type=button]').addEventListener('cli
         '[‌‌Перезвонить](' + document.location.origin+document.location.pathname + 'recall.html?' + document.getElementById('tb_phone').value.replace('+','') + ')'
     )    
 })
+function form_clear() {
+    document.getElementById('tb_name').value = ''
+    document.getElementById('tb_phone').value = ''
+    document.getElementById('tb_message').value = ''
+}
 
 function send_message(text) {
     const telegram_api_key = '5178774646:AAF2TR-SJXoLeBkt0Jy5FFUOumfYtB9wL8k' //please not use
@@ -76,6 +82,7 @@ function send_message(text) {
         message_show_el.classList.add('show')
         setTimeout(()=>{
             message_show_el.classList.remove('show')
+            form_clear()
         },3000)
         
     }).catch((err) => {

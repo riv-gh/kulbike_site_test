@@ -25,12 +25,11 @@
         <a href="javascript:toggleMenu();" id="menu_btn">Меню</a>
         <a href="#first-container"><span>KUL</span>BIKE</a>
         <a href="#price-container">Стоимость работ</a>
-        <a href="#bicycle-container">Велосипеды</a>
-        <a href="#shop-container">Купить велосипед</a>
         <a href="#instagram-container">Фотогалерея</a>
         <a href="#map-container">Где нас найти</a>
         <a href="#message-container">Оставить сообщение</a>
         <a href="tel:+380985193903">+38(098)519-39-03</a>
+        <a href="#">UA</a>
     </div>
     <section id="first-container" onclick="toggleMenu();">
         <div>
@@ -48,193 +47,6 @@
 
         </table>
     </section>
-    <section id="shop-container">
-        <h2>Купить велосипед</h2>
-        <div class="item-list">
-            <div class="item-block">
-                <h3>bike name</h3>
-                <div class="item"
-                    style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_0_large.webp)"
-                >
-                    <div>Подробнее</div>
-                </div>
-                
-            </div>
-            <div class="item-block">
-                <h3>bike name</h3>
-                <div class="item"
-                    style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_1_large.webp)"
-                >
-                    <div>Подробнее</div>
-                </div>
-                
-            </div>
-            <div class="item-block">
-                <h3>bike name</h3>
-                <div class="item"
-                    style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_2_large.webp)"
-                >
-                    <div>Подробнее</div>
-                </div>
-                
-            </div>
-            <div class="item-block">
-                <h3>bike name</h3>
-                <div class="item"
-                    style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_0_large.webp)"
-                >
-                    <div>Подробнее</div>
-                </div>
-                
-            </div>
-            <div class="item-block">
-                <h3>bike name</h3>
-                <div class="item"
-                    style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_1_large.webp)"
-                >
-                    <div>Подробнее</div>
-                </div>
-                
-            </div>
-            <div class="item-block">
-                <h3>bike name</h3>
-                <div class="item"
-                    style="background-image:url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_2_large.webp)"
-                >
-                    <div>Подробнее</div>
-                </div>
-                
-            </div>
-        </div>
-    </section>
-    <style>
-        #shop-container .item-list {
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-around;
-        }
-        #shop-container .item-list>div {
-            /* outline: 1px solid red; */
-            padding-bottom: 40px;
-            /* width: 30%; под разную ширину */
-            text-align: center;
-        }
-        #shop-container .item-list .item {
-            background-color: #fff;
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: contain;
-            margin: 0 auto;
-            border-radius: 30px;
-            width: 25vw;
-            height: 25vw;
-            position: relative;
-            transition: transform .2s;
-        }
-        #shop-container .item-list .item>div {
-            background-color: #e46404;
-            display: inline-block;
-            padding: 20px 30px;
-            border-radius: 10px;
-            text-decoration: none;
-            position: absolute;
-            bottom:-30px;
-            transform: translateX(-50%);
-            z-index: 10;
-            transition: transform .2s;
-        }
-        #shop-container .item-list .item:hover {
-            transform: scale(105%);
-        }
-        #shop-container .item-list .item:hover>div {
-            /* transform: scale(105%); */
-            transform: translateX(-50%) scale(110%);
-        }
-    </style>
-    <section id="bicycle-container">
-        <h2>Велосипеды</h2>
-        <div>
-            <div style="background-image: url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_0_large.webp);"></div>
-            <div>
-                <h3>Название велосипеда</h3>
-                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur aperiam labore id ut dolorum nam, reiciendis vitae dicta dignissimos consequatur exercitationem, officiis iure aliquid quod, doloremque voluptas. Cumque, unde distinctio?</div>
-                <div>
-                    <!-- <div onclick="showBig(event)" style="background-image: url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_7_large.webp);"></div> -->
-                    <div class="active"  onclick="showBig(event)" style="background-image: url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_0_large.webp);"></div>
-                    <div onclick="showBig(event)" style="background-image: url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_1_large.webp);"></div>
-                    <div onclick="showBig(event)" style="background-image: url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_2_large.webp);"></div>
-                </div>
-                <a href="javascript:void(0)">Купить</a>
-            </div>
-        </div>
-        <div>
-            <div style="background-image: url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_7_large.webp);"></div>
-            <div>
-                <h3>Название велосипеда</h3>
-                <div>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aspernatur aperiam labore id ut dolorum nam, reiciendis vitae dicta dignissimos consequatur exercitationem, officiis iure aliquid quod, doloremque voluptas. Cumque, unde distinctio?</div>
-                <div>
-                    <div class="active" onclick="showBig(event)" style="background-image: url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_7_large.webp);"></div>
-                    <div onclick="showBig(event)" style="background-image: url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_0_large.webp);"></div>
-                    <div onclick="showBig(event)" style="background-image: url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_1_large.webp);"></div>
-                    <div onclick="showBig(event)" style="background-image: url(https://embedsocial.com/admin/feedcdn/feed-media/18115/18115965007280800/image_2_large.webp);"></div>
-                </div>
-                <a href="javascript:void(0)">Купить</a>
-            </div>
-        </div>
-    </section>
-    <script>
-        function showBig() {
-            event.target.parentNode.querySelector('.active').classList.remove('active')
-            event.target.classList.add('active')
-            event.target.parentNode.parentNode.parentNode.querySelector('div').style.backgroundImage = event.target.style.backgroundImage
-        }
-    </script>
-    <style>
-        #bicycle-container>div {
-            display: flex;
-            align-items: flex-start;
-            margin-bottom: 50px;
-        }
-        #bicycle-container>div>div {
-            display: inline-block;
-            width: 50%;
-        }
-        #bicycle-container>div>div:nth-child(1),
-        #bicycle-container>div>div:nth-child(2)>div+div>div {
-            background-color: #fff;
-            background-image: url(https://i.gifer.com/origin/a1/a1bb0cc10512df82afd421a77097cb91_w200.gif);
-            background-repeat: no-repeat;
-            background-position: center center;
-            background-size: contain;
-            height: 50vw;
-            border-radius:15px;
-        }
-        #bicycle-container>div>div:nth-child(2) {
-            padding: 0 30px;
-        }
-        #bicycle-container>div>div:nth-child(2)>div {
-            text-align: justify;
-        }
-        #bicycle-container>div>div:nth-child(2)>div+div {
-            display:flex;
-            flex-wrap: wrap;
-            justify-content: space-between;
-
-        }
-        #bicycle-container>div>div:nth-child(2)>div:nth-child(3)>div {
-            background-color: #fff;
-            border: 2px solid #fff;
-            display: inline-block;
-            margin: 10px;
-            height: 10vw;
-            width: 10vw;
-        }
-        #bicycle-container>div>div:nth-child(2)>div:nth-child(3)>div:hover,
-        #bicycle-container>div>div:nth-child(2)>div:nth-child(3)>div.active {
-            border: 2px solid #e46404;
-        }
-    </style>
     <section id="instagram-container">
         <h2>Фотогалерея</h2>
         <!-- https://embedsocial.com/ -->
@@ -274,7 +86,7 @@
             <input type="button" value="Отправить">
         </form>
         <div id="message_show">
-            <div>Оставить сообщение</div>
+            <div>Сообщение отправлено</div>
             <pre></pre>
             <a href="javascript:void(0)">Закрыть</a>
         </div>
