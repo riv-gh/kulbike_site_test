@@ -84,7 +84,10 @@ h2 {
 }
 #first-container>.first-buttons {
     position: absolute;
-    top: 90vh
+    top: 80vh;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
 
 #fon_cover {
