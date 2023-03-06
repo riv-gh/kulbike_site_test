@@ -22,23 +22,35 @@
         <li><span></span></li>
     </ul>
     <div id="menu">
-        <a href="javascript:toggleMenu();" id="menu_btn">Меню</a>
+        <a href="javascript:toggleMenu();" id="menu_btn">
+            <!-- Меню -->
+            <span></span>
+            <span></span>
+            <span></span>
+        </a>
+        <a href="tel:+380985193903" id="tel_btn_small">☎</a>
+        <!-- <a href="tel:+380985193903" id="tel_btn_small">☎</a> -->
         <a href="#first-container"><span>KUL</span>BIKE</a>
         <a href="#price-container">Стоимость работ</a>
         <a href="#instagram-container">Фотогалерея</a>
         <a href="#map-container">Где нас найти</a>
-        <a href="#message-container">Оставить сообщение</a>
-        <a href="tel:+380985193903">+38(098)519-39-03</a>
+        <!-- <a href="#message-container">Оставить сообщение</a> -->
         <!-- <a href="#">UA</a> -->
     </div>
-    <section id="first-container" onclick="toggleMenu();">
-        <div>
+    <!-- <section id="first-container" onclick="toggleMenu();"> -->
+    <section id="first-container">
+        <div class="logo">
             <div>Веломастерская</div>
             <h1>
                 <span>KUL</span>
                 <span>BIKE</span>
             </h1>
             <div>Веломагазин</div>
+        </div>
+        <div class="first-buttons">
+            <a href="#" class="link-btn">test</a>
+            <a href="#" class="link-btn">test</a>
+            <a href="#" class="link-btn">test</a>
         </div>
     </section>
     <section id="price-container">
@@ -73,7 +85,7 @@
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4275.710702237323!2d30.613368952068406!3d50.415898221178075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb4c045cb3fa8ad6b!2z0JLQtdC70L7QvNCw0YHRgtC10YDRgdC60LDRjywg0JLQtdC70L4g0LzQsNCz0LDQt9C40L0sINCg0LXQvNC-0L3RgiDQstC10LvQvtGB0LjQv9C10LTQsCwg0KDQtdC80L7QvdGCINGB0LDQvNC-0LrQsNGC0LAs0JLQtdC70L7RgNC10LzQvtC90YI!5e0!3m2!1sru!2sua!4v1644399465165!5m2!1sru!2sua" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
         </div>
     </section>
-    <section id="message-container">
+    <!-- <section id="message-container">
         <h2>Оставить сообщение</h2>
         <form id="message-form" action='/' method="get">
             <label for="tb_name">Как обращаться?</label>
@@ -91,7 +103,7 @@
             <a href="javascript:void(0)">Закрыть</a>
         </div>
         
-    </section>
+    </section> -->
     <section id="footer-container">
         <span>KUL</span>BIKE &copy; <span id="year">2017</span>
     </section>
